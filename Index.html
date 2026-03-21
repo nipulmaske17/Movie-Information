@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Information</title>
+
+<style>
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#111;
+    color:white;
+    margin:0;
+}
+
+header{
+    text-align:center;
+    padding:20px;
+    background:#e50914;
+}
+
+.movie-container{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    padding:40px;
+    gap:40px;
+}
+
+.movie-card{
+    display:flex;
+    gap:20px;
+    max-width:600px;
+    background:#1c1c1c;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.movie-card:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 15px #e50914;
+}
+
+.poster{
+    width:100%;
+    max-width:200px;
+    border-radius:10px;
+}
+
+.movie-details{
+    max-width:350px;
+}
+
+.description{
+    margin-top:10px;
+    line-height:1.6;
+}
+
+.rating{
+    color:gold;
+    font-weight:bold;
+}
+
+button{
+    padding:10px 20px;
+    margin-top:15px;
+    background:#e50914;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:14px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff1e2d;
+}
+
+/* Footer */
+.footer{
+    background: linear-gradient(90deg,#e50914,#b00610);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+    font-size:16px;
+}
+
+/* Scroll Buttons */
+.scroll-btn{
+    position:fixed;
+    right:20px;
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    color:white;
+    background:#e50914;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    transition:0.3s;
+}
+
+.scroll-btn:hover{
+    background:#ff1e2d;
+    transform:scale(1.1);
+}
+
+.up{
+    bottom:80px;
+}
+
+.down{
+    bottom:20px;
+}
+
+/* Responsive */
+@media(max-width:700px){
+    .movie-card{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+}
+</style>
+
+</head>
+
+<body id="top">
+
+<header>
+    <h1>🎬 Movie Information</h1>
+    <input type="text" id="search" placeholder="Search movie...">
+</header>
+
+<div class="movie-container">
+
+<!-- Movie 1 -->
+<div class="movie-card">
+<img src="https://m.media-amazon.com/images/I/81ExhpBEbHL.jpg" class="poster">
+<div class="movie-details">
+<h2>Avengers: Endgame</h2>
+<p><strong>Release Date:</strong> 26 April 2019</p>
+<p><strong>Genre:</strong> Action, Adventure, Sci-Fi</p>
+<p class="rating"><strong>Rating:</strong> ⭐ 8.4 / 10</p>
+<p class="description">
+After the devastating events of Infinity War, the Avengers assemble once more.
+</p>
+<a href="https://www.youtube.com/watch?v=TcMBFSGVi1c" target="_blank">
+<button>Watch Trailer</button>
+</a>
+</div>
+</div>
+
+<!-- Movie 2 -->
+<div class="movie-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/9/99/Dangal_Poster.jpg" class="poster">
+<div class="movie-details">
+<h2>Dangal</h2>
+<p><strong>Release Date:</strong> 2016</p>
+<p><strong>Genre:</strong> Biography, Sports</p>
+<p class="rating"><strong>Rating:</strong> ⭐ 8.4 / 10</p>
+<p class="description">A wrestler trains his daughters to become world-class champions.</p>
+<a href="https://www.youtube.com/watch?v=x_7YlGv9u1g" target="_blank">
+<button>Watch Trailer</button>
+</a>
+</div>
+</div>
+
+<!-- Movie 3 -->
+<div class="movie-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg" class="poster">
+<div class="movie-details">
+<h2>RRR</h2>
+<p><strong>Release Date:</strong> 2022</p>
+<p><strong>Genre:</strong> Action, Drama</p>
+<p class="rating"><strong>Rating:</strong> ⭐ 8.0 / 10</p>
+<p class="description">Two revolutionaries fight against British rule.</p>
+<a href="https://www.youtube.com/watch?v=f_vbAtFSEc0" target="_blank">
+<button>Watch Trailer</button>
+</a>
+</div>
+</div>
+
+<!-- Movie 4 -->
+<div class="movie-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Baahubali_The_Beginning_poster.jpg" class="poster">
+<div class="movie-details">
+<h2>Baahubali</h2>
+<p><strong>Release Date:</strong> 2015</p>
+<p><strong>Genre:</strong> Action, Epic</p>
+<p class="rating"><strong>Rating:</strong> ⭐ 8.0 / 10</p>
+<p class="description">A young man discovers his royal heritage and destiny.</p>
+<a href="https://www.youtube.com/watch?v=sOEg_YZQsTI" target="_blank">
+<button>Watch Trailer</button>
+</a>
+</div>
+</div>
+
+<!-- Movie 5 -->
+<div class="movie-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/3/39/Jawan_film_poster.jpg" class="poster">
+<div class="movie-details">
+<h2>Jawan</h2>
+<p><strong>Release Date:</strong> 2023</p>
+<p><strong>Genre:</strong> Action, Thriller</p>
+<p class="rating"><strong>Rating:</strong> ⭐ 7.1 / 10</p>
+<p class="description">A man fights corruption with a powerful mission.</p>
+<a href="https://www.youtube.com/watch?v=COv52Qyctws" target="_blank">
+<button>Watch Trailer</button>
+</a>
+</div>
+</div>
+
+<!-- Movie 6 -->
+<div class="movie-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/d/df/3_idiots_poster.jpg" class="poster">
+<div class="movie-details">
+<h2>3 Idiots</h2>
+<p><strong>Release Date:</strong> 2009</p>
+<p><strong>Genre:</strong> Comedy, Drama</p>
+<p class="rating"><strong>Rating:</strong> ⭐ 8.4 / 10</p>
+<p class="description">Three engineering students learn life lessons beyond academic success.</p>
+<a href="https://www.youtube.com/results?search_query=3+idiots+trailer" target="_blank">
+<button>Watch Trailer</button>
+</a>
+</div>
+</div>
+
+<!-- Movie 7 -->
+<div class="movie-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Sultan_film_poster.jpg" class="poster">
+<div class="movie-details">
+<h2>Sultan</h2>
+<p><strong>Release Date:</strong> 2016</p>
+<p><strong>Genre:</strong> Sports, Action</p>
+<p class="rating"><strong>Rating:</strong> ⭐ 7.0 / 10</p>
+<p class="description">A wrestler struggles with his career and personal life.</p>
+<a href="https://www.youtube.com/results?search_query=sultan+movie+trailer" target="_blank">
+<button>Watch Trailer</button>
+</a>
+</div>
+</div>
+
+</div>
+
+<!-- Bottom Anchor -->
+<div id="bottom"></div>
+
+<!-- Scroll Buttons -->
+<a href="#top" class="scroll-btn up">⬆</a>
+<a href="#bottom" class="scroll-btn down">⬇</a>
+
+<footer class="footer">
+<p>🎬 Made by <strong>Nipul Maske</strong></p>
+<p> &#127909; &#127871; &#x1F3AC;</p>
+<p>© 2026 Movie Information Website</p>
+</footer>
+
+</body>
+</html>
